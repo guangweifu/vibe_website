@@ -43,18 +43,25 @@
                             class="font-light text-gray-500">at JHU</span></span>
                 </div>
                 <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Home</a>
                     <a href="#research"
-                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Research Areas</a>
-                    <a href="#publications"
-                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Publications</a>
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Research</a>
                     <a href="#team"
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Team</a>
+                    <a href="#publications"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Publications</a>
+                    <a href="#support"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Support</a>
+                    <a href="#news"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">News</a>
                     <a href="#contact"
                         class="px-5 py-2 rounded-full bg-jhu-blue text-white font-semibold hover:bg-blue-900 transition duration-150 shadow-md">Contact</a>
                 </div>
-                <!-- Mobile menu button placeholder -->
+                <!-- Mobile menu button -->
                 <div class="flex items-center md:hidden">
-                    <button type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                        class="text-gray-500 hover:text-gray-700 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -63,38 +70,36 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Home</a>
+                <a href="#research"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Research</a>
+                <a href="#team"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Team</a>
+                <a href="#publications"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Publications</a>
+                <a href="#support"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Support</a>
+                <a href="#news"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">News</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-jhu-blue hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-gray-900 h-[600px] flex items-center">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-                alt="Microscopy cell biology" class="w-full h-full object-cover opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-r from-jhu-blue/90 to-transparent"></div>
-        </div>
-
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    Targeting the <span class="text-jhu-gold">Bone Marrow Microenvironment</span> in Hematologic
-                    Malignancies
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light leading-relaxed">
-                    Our mission is to understand the role of the microenvironment in drug resistance and develop novel
-                    therapeutic strategies for leukemia and multiple myeloma.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#research"
-                        class="inline-flex justify-center items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-jhu-blue bg-white hover:bg-gray-100 transition duration-150 shadow-lg">
-                        Learn More
-                    </a>
-                    <a href="#publications"
-                        class="inline-flex justify-center items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition duration-150">
-                        View Publications
-                    </a>
-                </div>
-            </div>
+    <section id="home" class="relative bg-gray-900 flex items-center justify-center">
+        <!-- Background Video -->
+        <div class="w-full">
+            <video autoplay loop muted playsinline class="w-full h-auto">
+                <source src="Presentation2-1-4K.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
@@ -292,6 +297,39 @@
                             d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-jhu-blue mb-4">Support Our Research</h2>
+                <p class="max-w-2xl mx-auto text-xl text-gray-600">Your support helps us advance our understanding of
+                    hematologic malignancies.</p>
+            </div>
+            <!-- Content placeholder -->
+            <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                <p class="text-gray-600">Information about how to support the lab will be available here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-jhu-blue mb-4">Latest News</h2>
+                <p class="max-w-2xl mx-auto text-xl text-gray-600">Updates from the Ghiaur Lab.</p>
+            </div>
+            <!-- Content placeholder -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="text-gray-500 text-sm mb-2">Coming Soon</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">News updates coming soon</h3>
+                    <p class="text-gray-600">Stay tuned for the latest announcements and publications.</p>
+                </div>
             </div>
         </div>
     </section>
