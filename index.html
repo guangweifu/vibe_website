@@ -92,23 +92,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative flex items-center min-h-[600px]"
-        style="background: linear-gradient(to right, #002D72, white);">
+    <section id="home"
+        class="relative flex items-center min-h-[600px] overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#0d3676] via-[#3b6094] via-15% to-[#e6efff] py-12 md:py-10">
+
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Left Column: Text -->
-                <div class="text-white z-10">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        Targeting the <span class="text-jhu-gold">Bone Marrow Microenvironment</span> in Hematologic
-                        Malignancies
+                <div class="text-white relative z-20">
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Decoding <span class="text-[#cba052]">Microenvironment–Stem Cell Interactions</span> in Health
+                        and Malignancy
                     </h1>
-                    <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light leading-relaxed">
-                        Our mission is to understand the role of the microenvironment in drug resistance and develop
-                        novel therapeutic strategies for leukemia and multiple myeloma.
+                    <p class="text-lg md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
+                        Our mission is to uncover how the bone marrow microenvironment regulates normal and malignant
+                        hematopoietic stem cells, shaping stem cell aging, clonal evolution, and therapeutic resistance.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="research.html"
-                            class="inline-flex justify-center items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-jhu-blue bg-white hover:bg-gray-100 transition duration-150 shadow-lg">
+                            class="inline-flex justify-center items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0d3676] bg-white hover:bg-gray-100 transition duration-150 shadow-lg">
                             Learn More
                         </a>
                         <a href="publications.html"
@@ -118,12 +120,16 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Video -->
-                <div class="relative">
-                    <video autoplay loop muted playsinline class="w-full h-auto mix-blend-multiply">
-                        <source src="Presentation2-1-4K.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <!-- Right Column / Video (Relative on mobile, Absolute on Desktop) -->
+                <div class="relative w-full h-[300px] lg:h-full lg:absolute lg:inset-0 lg:z-0 lg:flex lg:justify-end pointer-events-none mix-blend-multiply"
+                    style="-webkit-mask-image: linear-gradient(to right, transparent, black 20%); mask-image: linear-gradient(to right, transparent, black 20%);">
+                    <div class="w-full h-full relative">
+                        <video autoplay loop muted playsinline
+                            class="w-full h-full object-cover lg:object-contain object-center lg:object-right">
+                            <source src="Presentation2-1-4K.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,19 +141,18 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-12 lg:mb-0">
                     <h2 class="text-sm font-bold text-jhu-gold uppercase tracking-wider mb-2">About Our Lab</h2>
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Bridging Clinical Care and Research</h3>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Transforming Stem Cell Biology Through Patient
+                        Care, Scientific Discovery, and Mentoring</h3>
                     <div class="prose prose-lg text-gray-600">
                         <p class="mb-6">
-                            Dr. Gabriel Ghiaur is an Associate Professor of Oncology and a member of the Johns Hopkins
-                            Kimmel Cancer Center. As a physician-scientist, his primary interest lies in normal and
-                            malignant hematopoiesis, specifically investigating how the microenvironment contributes to
-                            cell extrinsic drug resistance and the persistence of minimal residual disease.
-                        </p>
-                        <p>
-                            His dual role as a laboratory-based investigator and clinician allows for unique
-                            translational potential in stem cell therapeutics, acute leukemia, and multiple myeloma. The
-                            lab combines advanced research with clinical insights to bridge the gap between molecular
-                            mechanisms and patient care.
+                            The Ghiaur Lab, housed within the Sidney Kimmel Comprehensive Cancer Center at Johns
+                            Hopkins, brings together clinical expertise, mechanistic discovery, and scientific training
+                            to advance the understanding of stem cell biology. Our research investigates how the bone
+                            marrow microenvironment shapes hematopoietic stem cell homeostasis, stem cell aging, clonal
+                            evolution, and malignant transformation. Guided by real-world clinical challenges, we strive
+                            to uncover mechanisms that bridge basic biology with therapeutic innovation, ultimately
+                            improving outcomes for patients with hematologic diseases. Through this work, we remain
+                            committed to training the next generation of leaders in hematopoietic stem cell biology.
                         </p>
                     </div>
                 </div>
@@ -169,26 +174,28 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-jhu-gold">The Ghiaur Lab</h3>
                     <p class="text-gray-300">
-                        Johns Hopkins University<br>
-                        School of Medicine<br>
-                        733 N. Broadway<br>
-                        Baltimore, MD 21205
+                        1650 Orleans St., CRB I<br>
+                        Room 230-231<br>
+                        Baltimore, MD, 21287
                     </p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <p class="text-gray-300">
-                        Email: <a href="mailto:contact@ghiaurlab.jhu.edu"
-                            class="hover:text-white underline decoration-jhu-gold">contact@ghiaurlab.jhu.edu</a><br>
-                        Phone: (410) 555-0123
+                        Email: <a href="mailto:gghiaur1@jhmi.edu"
+                            class="hover:text-white underline decoration-jhu-gold">gghiaur1@jhmi.edu</a><br>
+                        Phone: 410-502-3183<br>
+                        Fax: 410-614-7279
                     </p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Affiliations</h3>
                     <p class="text-gray-300 text-sm">
-                        Department of Cell Biology<br>
+                        Adult Leukemia Program<br>
+                        Division of Hematological Malignancies<br>
+                        Department of Oncology<br>
                         Sidney Kimmel Comprehensive Cancer Center<br>
-                        Johns Hopkins Medicine
+                        Johns Hopkins School of Medicine
                     </p>
                 </div>
             </div>
