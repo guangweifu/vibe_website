@@ -47,6 +47,8 @@
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Home</a>
                     <a href="research.html"
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Research</a>
+                    <a href="notch.html"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">NOTCH</a>
                     <a href="team.html"
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Team</a>
                     <a href="publications.html"
@@ -77,6 +79,8 @@
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Home</a>
                 <a href="research.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Research</a>
+                <a href="notch.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">NOTCH</a>
                 <a href="team.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Team</a>
                 <a href="publications.html"
@@ -100,11 +104,68 @@
                     hematologic malignancies.</p>
             </div>
             <!-- Content placeholder -->
-            <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                <p class="text-gray-600">Information about how to support the lab will be available here.</p>
+            <!-- Donation Section -->
+            <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Make a Donation</h3>
+                <p class="text-gray-600 mb-8">Select an amount to support our research.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <button onclick="triggerConfetti()"
+                        class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
+                        $25
+                    </button>
+                    <button onclick="triggerConfetti()"
+                        class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
+                        $50
+                    </button>
+                    <button onclick="triggerConfetti()"
+                        class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
+                        $100
+                    </button>
+                    <button onclick="triggerConfetti()"
+                        class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
+                        Custom
+                    </button>
+                </div>
+
+                <p class="text-sm text-gray-500">Thank you for your generosity!</p>
             </div>
         </div>
     </section>
+
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function triggerConfetti() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function () {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+                // since particles fall down, start a bit higher than random
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+
+            // Also fire a burst immediately
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
 
     <!-- Footer -->
     <footer id="contact" class="bg-[#072e50] text-white py-12">

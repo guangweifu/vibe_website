@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ghiaur Lab at JHU | Cancer Research</title>
+    <title>NOTCH | The Ghiaur Lab at JHU</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -39,15 +39,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-jhu-blue tracking-tight">The Ghiaur Lab <span
-                            class="font-light text-gray-500">at JHU</span></span>
+                    <a href="index.html" class="text-2xl font-bold text-jhu-blue tracking-tight">The Ghiaur Lab <span
+                            class="font-light text-gray-500">at JHU</span></a>
                 </div>
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="index.html" class="text-jhu-blue font-bold transition duration-150">Home</a>
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Home</a>
                     <a href="research.html"
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Research</a>
-                    <a href="notch.html"
-                        class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">NOTCH</a>
+                    <a href="notch.html" class="text-jhu-blue font-bold transition duration-150">NOTCH</a>
                     <a href="team.html"
                         class="text-gray-700 hover:text-jhu-blue font-medium transition duration-150">Team</a>
                     <a href="publications.html"
@@ -76,11 +76,11 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-jhu-blue bg-gray-50">Home</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Home</a>
                 <a href="research.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Research</a>
                 <a href="notch.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">NOTCH</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-jhu-blue bg-gray-50">NOTCH</a>
                 <a href="team.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-jhu-blue hover:bg-gray-50">Team</a>
                 <a href="publications.html"
@@ -95,80 +95,43 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative flex items-center min-h-[600px] overflow-hidden bg-[#0a2a47] py-12 md:py-10">
-
-
-        <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="w-full h-full object-contain">
-                <source src="4K_transparent.webm" type="video/webm">
-                <source src="4K blue background.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <!-- About the Lab -->
-    <section id="about" class="py-20 bg-white">
+    <!-- Main Content -->
+    <section class="py-20 bg-gray-50 min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div class="mb-12 lg:mb-0">
-                    <h2 class="text-sm font-bold text-jhu-gold uppercase tracking-wider mb-2">About Our Lab</h2>
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Transforming Stem Cell Biology Through Patient
-                        Care, Scientific Discovery, and Mentoring</h3>
-                    <div class="prose prose-lg text-gray-600">
-                        <p class="mb-6">
-                            The Ghiaur Lab, housed within the Sidney Kimmel Comprehensive Cancer Center at Johns
-                            Hopkins, brings together clinical expertise, mechanistic discovery, and scientific training
-                            to advance the understanding of stem cell biology. Our research investigates how the bone
-                            marrow microenvironment shapes hematopoietic stem cell homeostasis, stem cell aging, clonal
-                            evolution, and malignant transformation. Guided by real-world clinical challenges, we strive
-                            to uncover mechanisms that bridge basic biology with therapeutic innovation, ultimately
-                            improving outcomes for patients with hematologic diseases. Through this work, we remain
-                            committed to training the next generation of leaders in hematopoietic stem cell biology.
-                        </p>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div
-                        class="absolute inset-0 bg-jhu-gold transform translate-x-4 translate-y-4 rounded-lg opacity-20">
-                    </div>
-                    <img src="lab_group.jpg" alt="Lab environment"
-                        class="relative rounded-lg shadow-xl w-full object-cover h-[400px]">
-                </div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-jhu-blue mb-4">NOTCH</h2>
+                <p class="max-w-2xl mx-auto text-xl text-gray-600">Content coming soon.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-[#0a2a47] text-white py-12">
+    <footer id="contact" class="bg-[#072e50] text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-jhu-gold">The Ghiaur Lab</h3>
                     <p class="text-gray-300">
-                        1650 Orleans St., CRB I<br>
-                        Room 230-231<br>
-                        Baltimore, MD, 21287
+                        Johns Hopkins University<br>
+                        School of Medicine<br>
+                        733 N. Broadway<br>
+                        Baltimore, MD 21205
                     </p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <p class="text-gray-300">
-                        Email: <a href="mailto:gghiaur1@jhmi.edu"
-                            class="hover:text-white underline decoration-jhu-gold">gghiaur1@jhmi.edu</a><br>
-                        Phone: 410-502-3183<br>
-                        Fax: 410-614-7279
+                        Email: <a href="mailto:contact@ghiaurlab.jhu.edu"
+                            class="hover:text-white underline decoration-jhu-gold">contact@ghiaurlab.jhu.edu</a><br>
+                        Phone: (410) 555-0123
                     </p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Affiliations</h3>
                     <p class="text-gray-300 text-sm">
-                        Adult Leukemia Program<br>
-                        Division of Hematological Malignancies<br>
-                        Department of Oncology<br>
+                        Department of Cell Biology<br>
                         Sidney Kimmel Comprehensive Cancer Center<br>
-                        Johns Hopkins School of Medicine
+                        Johns Hopkins Medicine
                     </p>
                 </div>
             </div>
