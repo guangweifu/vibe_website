@@ -110,19 +110,19 @@
                 <p class="text-gray-600 mb-8">Select an amount to support our research.</p>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                    <button onclick="triggerConfetti()"
+                    <button onclick="triggerConfetti(25)"
                         class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
                         $25
                     </button>
-                    <button onclick="triggerConfetti()"
+                    <button onclick="triggerConfetti(50)"
                         class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
                         $50
                     </button>
-                    <button onclick="triggerConfetti()"
+                    <button onclick="triggerConfetti(100)"
                         class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
                         $100
                     </button>
-                    <button onclick="triggerConfetti()"
+                    <button onclick="triggerConfetti(200)"
                         class="donation-btn px-6 py-3 rounded-lg border-2 border-jhu-blue text-jhu-blue font-bold hover:bg-jhu-blue hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jhu-blue">
                         Custom
                     </button>
@@ -136,10 +136,16 @@
     <!-- Confetti Script -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
-        function triggerConfetti() {
+        function triggerConfetti(amount) {
             var duration = 3 * 1000;
             var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+            var defaults = { startVelocity: 10, spread: 360, ticks: 60, zIndex: 0 };
+
+            // Scale intensity based on amount
+            var intensity = 1;
+            if (amount >= 50) intensity = 1;
+            if (amount >= 100) intensity = 20;
+            if (amount >= 200) intensity = 50;
 
             function randomInRange(min, max) {
                 return Math.random() * (max - min) + min;
@@ -152,7 +158,8 @@
                     return clearInterval(interval);
                 }
 
-                var particleCount = 50 * (timeLeft / duration);
+                var particleCount = (50 * intensity) * (timeLeft / duration);
+
                 // since particles fall down, start a bit higher than random
                 confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
                 confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
@@ -160,9 +167,9 @@
 
             // Also fire a burst immediately
             confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
+                particleCount: 100 * intensity,
+                spread: 360,
+                origin: { y: 0.3 },
             });
         }
     </script>
